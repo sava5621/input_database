@@ -8,7 +8,8 @@ namespace input_database.InsecticidesFolder
 {
     public class Insecticides
     {
-        public int id { get; }
+        
+        public int id { get; set; }
         public string title { get; set; }
         public string standard { get; set; }
         public float price { get; set; }

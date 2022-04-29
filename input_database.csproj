@@ -69,6 +69,9 @@
     <Compile Include="YearFolder\main_data_year.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="СonnectionFolder\add_db_connection.cs" />
+    <Compile Include="СonnectionFolder\Connection.cs" />
+    <Compile Include="СonnectionFolder\connectionContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
