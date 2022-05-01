@@ -7,7 +7,7 @@ namespace input_database.СonnectionFolder
     {
         [Key]
         public int id { get; set; }
-        public int id_stage { get; set; }
-        public int id_insecticides { get; set; }
+        public string id_stage { get; set; }
+        public string id_insecticides { get; set; }
     }
 }

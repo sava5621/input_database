@@ -9,7 +9,7 @@ namespace input_database.YearFolder
 {
     public static class add_db_years
     {
-        static void start()
+        static public void start()
         {
             using (dataContext db = new dataContext())
             {
@@ -88,12 +88,12 @@ namespace input_database.YearFolder
         }
         static string data_year_to_str(data_year input)
         {
-            return input.Date.ToString() + ";"
-                + input.Count_day.ToString() + ";"
-                + input.Temperature.ToString() + ";"
-                + input.SOE_Temperature.ToString() + ";"
-                + input.Individuals_in_trap.ToString() + ";"
-                + input.Criterion_sum_effective_temperatures.ToString();
+            return "[" + input.Date.ToString() + ","
+                + input.Count_day.ToString() + ","
+                + input.Temperature.ToString() + ","
+                + input.SOE_Temperature.ToString() + ","
+                + input.Individuals_in_trap.ToString() + ","
+                + input.Criterion_sum_effective_temperatures.ToString()+"]" ;
 
         }
         static data_year checked_Data(object[,] data, int year)
