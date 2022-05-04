@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace input_database.YearFolder
 {
         class dataContext : DbContext
-        {
+    {
             public dataContext()
                 : base("DbConnection")
             { }

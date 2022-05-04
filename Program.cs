@@ -14,6 +14,8 @@ namespace input_database
         public static void Main()
         {
             add_db_years.start();
+            add_db_connection.start();
+
         }
           
     }

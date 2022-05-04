@@ -1,4 +1,5 @@
 ﻿using Microsoft.Office.Interop.Excel;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -88,12 +89,7 @@ namespace input_database.YearFolder
         }
         static string data_year_to_str(data_year input)
         {
-            return "[" + input.Date.ToString() + ","
-                + input.Count_day.ToString() + ","
-                + input.Temperature.ToString() + ","
-                + input.SOE_Temperature.ToString() + ","
-                + input.Individuals_in_trap.ToString() + ","
-                + input.Criterion_sum_effective_temperatures.ToString()+"]" ;
+            return JsonConvert.SerializeObject(input);
 
         }
         static data_year checked_Data(object[,] data, int year)
@@ -119,8 +115,6 @@ namespace input_database.YearFolder
                 resulst.SOE_Temperature = (float)Convert.ToDouble(data[1, 4].ToString());
             if (data[1, 5] != null)
                 resulst.Individuals_in_trap = Convert.ToInt32(data[1, 5].ToString());
-            if (data[1, 6] != null)
-                resulst.Criterion_sum_effective_temperatures = Convert.ToInt32(data[1, 6].ToString());
             return resulst;
         }
     }

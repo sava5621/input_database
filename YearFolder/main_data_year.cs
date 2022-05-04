@@ -14,6 +14,6 @@ namespace input_database.YearFolder
         public float Temperature { get; set; }
         public float SOE_Temperature { get; set; }
         public int Individuals_in_trap { get; set; }
-        public int Criterion_sum_effective_temperatures { get; set; }
+       
     }
 }
