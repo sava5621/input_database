@@ -9,5 +9,6 @@ namespace input_database.СonnectionFolder
         public int id { get; set; }
         public string id_stage { get; set; }
         public string id_insecticides { get; set; }
+        public string title { get; set; }
     }
 }

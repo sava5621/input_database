@@ -42,7 +42,7 @@ namespace input_database.InsecticidesFolder
             }
             else
             {
-                return vv;
+                return JsonConvert.SerializeObject( new float[] { float.Parse(vv) });
             }
         }
     }

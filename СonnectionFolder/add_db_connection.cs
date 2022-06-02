@@ -21,7 +21,7 @@ namespace input_database.СonnectionFolder
                 for (int i = 1; i < 14; i++)
                 {
                     buff = ((object[,])app.Sheets[1].Range["A" + i.ToString() + ":B" + i.ToString()].Value);
-                    db.conn.Add(new Connection { id_stage = buff[1, 1].ToString(), id_insecticides = buff[1, 2].ToString() });
+                    db.conn.Add(new Connection { id_stage = (int.Parse(buff[1, 1].ToString()) -1).ToString(), id_insecticides = buff[1, 2].ToString() });
                 }
                 db.SaveChanges();
                
